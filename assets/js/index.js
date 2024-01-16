@@ -45,6 +45,25 @@ async function updatePost(id, form){
     }
 }
 
+async function deletePost(id){
+    try{
+        const response = await fetch(`https://blog-api-t6u0.onrender.com/posts/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        });
+        const data = await response.json();
+        return data;
+    }catch(err){
+        console.log("err", err);
+    }
+};
+
+
+
 // showPosts();
 // createPost({title: 'Jimmy McGill', body: 'API test create'})
 // updatePost(1, {title: "John Doe", body: "Lorem IMPSUM"});
+
+// deletePost(5);
