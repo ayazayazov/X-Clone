@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 body {
   color: #e7e9ea;
@@ -55,13 +57,11 @@ main {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-bottom: 20px;
-  padding-right: 20px;
-}
+  position: relative;
+  overflow: auto;
+} 
 main .add {
-  position: sticky;
+  position: fixed;
   bottom: 100px;
   right: 30px;
   display: flex;
@@ -77,6 +77,13 @@ main .add {
 }
 main .add:hover {
   cursor: pointer;
+}
+main .button-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 footer {
   position: sticky;
