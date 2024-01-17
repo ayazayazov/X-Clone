@@ -1,111 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>X-Clone</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body>
-    <!-- person_info -->
-<div class="person_info">
-  <div class="heder_box_top">
-    <div class="line1">
-      <img src="./assets/imgs/profile.png" width="35px" alt="" />
-      <button class="line1_button"><h2>+</h2></button>
-    </div>
-    <h3>Noname Noname</h3>
-    <h4>@NonameNoname@1245</h4>
-    <div class="line3">
-      <h3>0</h3>
-      <h4>Following</h4>
-      <h3>0</h3>
-      <h4>Followers</h4>
-    </div>
-  </div>
-  <div class="heder_box_bottom">
-    <div class="heder_box_bottom_lines">
-      <img src="./assets/imgs/icons8-male-user-24.png" alt="" />
-      <h2>Profile</h2>
-    </div>
-    <div class="heder_box_bottom_lines">
-      <img src="./assets/imgs/x-icon.png" alt="" />
-      <h2>Premium</h2>
-    </div>
-    <div class="heder_box_bottom_lines">
-      <img src="./assets/imgs/icons8-moleskine-48.png" alt="" />
-      <h2>Lists</h2>
-    </div>
-    <div class="heder_box_bottom_lines">
-      <img src="./assets/imgs/icons8-bookmark-48.png" alt="" />
-      <h2>Bookmarks</h2>
-    </div>
-    <div class="heder_box_bottom_lines">
-      <img src="./assets/imgs/icons8-myspace-3-48.png" alt="" />
-      <h2>Comunities</h2>
-    </div>
-    <div class="heder_box_bottom_lines">
-      <img src="./assets/imgs/icons8-money-32.png" alt="" />
-      <h2>Monitization</h2>
-    </div>
-    <div class="heder_box_bottom_lines">
-      <img src="./assets/imgs/settings.png" alt="" />
-      <h2>Settings</h2>
-    </div>
-    <div class="heder_box_bottom_lines">
-      <img src="./assets/imgs/icons8-log-out-48.png" alt="" />
-      <h2>Log out</h2>
-    </div>
-  </div>
-</div>
-<!-- person_info -->
-    
-    <nav class="container1">
-      <header>
-        <nav class="first_nav">
-          <img src="./assets/imgs/profile.png" width="35px" />
-          <img src="./assets/imgs/x-icon.png" width="45px" />
-          <img src="./assets/imgs/settings.png" width="45px" />
-        </nav>
-        <nav class="second_nav">
-          <span>For You</span>
-          <span>Following</span>
-        </nav>
-      </header>
-      <main>
-        <div class="button-container">
-          <a href=""><button class="add">+</button></a>
-        </div>
-      </main>
-      <footer>
-        <div class="first">
-          <div class="dot"></div>
-          <img src="./assets/imgs/home.png" width="25px" />
-        </div>
-        <img src="./assets/imgs/search.png" width="25px" />
-        <img src="./assets/imgs/bell.png" width="25px" />
-        <img src="./assets/imgs/mail.png" width="29px" />
-      </footer>
-      <script src="./assets/js/index.js"></script>
-    </nav>
 
-    <!-- This area must work when i press + button -->
-    <nav class="container2">
-      <header>
-        <img src="./assets/imgs/back.png" width="18px">
-        <div class="buttons">
-          <span>Drafts</span>
-          <button>Post</button>
-        </div>
-      </header>
-      <main>
-        <section class="first_section">
-          <img src="./assets/imgs/profile.png" width="42px">
-          <input type="text" placeholder="What is happening?!">
-        </section>
-        <section class="first_section">
-        </section>  
-      </main>
-    </nav>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X-Clone</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- person_info -->
+  <div id="personInfo" class="person_info">
+    <div class="heder_box_top">
+      <div class="line1">
+        <!-- button>img -->
+        <button class="profileSideOfBtn" onclick="profileSideOfBtn()"><img src="./assets/imgs/profile.png" width="35px"
+            alt="" /></button>
+
+        <button class="line1_button">
+          <h2>+</h2>
+        </button>
+      </div>
+      <h3>Noname Noname</h3>
+      <h4>@NonameNoname@1245</h4>
+      <div class="line3">
+        <h3>0</h3>
+        <h4>Following</h4>
+        <h3>0</h3>
+        <h4>Followers</h4>
+      </div>
+    </div>
+    <div class="heder_box_bottom">
+      <div class="heder_box_bottom_lines">
+        <img src="./assets/imgs/icons8-male-user-24.png" alt="" />
+        <h2>Profile</h2>
+      </div>
+      <div class="heder_box_bottom_lines">
+        <img src="./assets/imgs/x-icon.png" alt="" />
+        <h2>Premium</h2>
+      </div>
+      <div class="heder_box_bottom_lines">
+        <img src="./assets/imgs/icons8-moleskine-48.png" alt="" />
+        <h2>Lists</h2>
+      </div>
+      <div class="heder_box_bottom_lines">
+        <img src="./assets/imgs/icons8-bookmark-48.png" alt="" />
+        <h2>Bookmarks</h2>
+      </div>
+      <div class="heder_box_bottom_lines">
+        <img src="./assets/imgs/icons8-myspace-3-48.png" alt="" />
+        <h2>Comunities</h2>
+      </div>
+      <div class="heder_box_bottom_lines">
+        <img src="./assets/imgs/icons8-money-32.png" alt="" />
+        <h2>Monitization</h2>
+      </div>
+      <div class="heder_box_bottom_lines">
+        <img src="./assets/imgs/settings.png" alt="" />
+        <h2>Settings</h2>
+      </div>
+      <div class="heder_box_bottom_lines">
+        <img src="./assets/imgs/icons8-log-out-48.png" alt="" />
+        <h2>Log out</h2>
+      </div>
+    </div>
+  </div>
+  <!-- person_info -->
+
+  <nav class="container1">
+    <header>
+      <nav class="first_nav">
+        <button class="profileSideOnBtn" onclick="profileSideOnBtn()"><img src="./assets/imgs/profile.png"
+            width="35px" /></button>
+
+        <img src="./assets/imgs/x-icon.png" width="45px" />
+        <img src="./assets/imgs/settings.png" width="45px" />
+      </nav>
+      <nav class="second_nav">
+        <span>For You</span>
+        <span>Following</span>
+      </nav>
+    </header>
+    <main>
+      <div class="button-container">
+        <a href=""><button class="add">+</button></a>
+      </div>
+    </main>
+    <footer>
+      <div class="first">
+        <div class="dot"></div>
+        <img src="./assets/imgs/home.png" width="25px" />
+      </div>
+      <img src="./assets/imgs/search.png" width="25px" />
+      <img src="./assets/imgs/bell.png" width="25px" />
+      <img src="./assets/imgs/mail.png" width="29px" />
+    </footer>
+    <script src="./assets/js/index.js"></script>
+  </nav>
+
+  <!-- This area must work when i press + button -->
+  <nav class="container2">
+    <header>
+      <img src="./assets/imgs/back.png" width="18px">
+      <div class="buttons">
+        <span>Drafts</span>
+        <button>Post</button>
+      </div>
+    </header>
+    <main>
+      <section class="first_section">
+        <img src="./assets/imgs/profile.png" width="42px">
+        <input type="text" placeholder="What is happening?!">
+      </section>
+      <section class="first_section">
+      </section>
+    </main>
+  </nav>
+  <script src="./assets/js/index.js"></script>
+</body>
+
 </html>

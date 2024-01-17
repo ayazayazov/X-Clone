@@ -183,16 +183,45 @@ body {
 }
 /* person_info */
 .person_info {
+  /* display: none; */
   width: 280px;
   height: 100%;
   background: #000;
-  border: solid 1px white;
-  transition: 0.2s;
+  /* border: solid 1px white; */
+  transition: 0.5s all;
+  /* animation: sideBar 0.5s; */
   position: fixed;
   height: 100vh;
   z-index: 99;
   top: 0;
   left: -280px;
+}
+
+@keyframes sideBarOn{
+  
+ 
+  100%{
+    left: 0px
+  }
+}
+
+@keyframes sideBarOff{
+  
+ 
+  100%{
+    left: -280px
+  }
+}
+
+.profileSideOnBtn{
+  margin-top: 24.5px;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+}
+
+.profileSideOfBtn{
+  cursor: pointer;
 }
 
 .heder_box {
@@ -215,7 +244,7 @@ body {
   color: #fff;
   width: 35px;
   height: 35px;
-
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;

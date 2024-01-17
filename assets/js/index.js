@@ -1,3 +1,23 @@
+
+function profileSideOnBtn(){
+    console.log('click')
+    document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
+    setTimeout(() => {
+    document.querySelector('#personInfo').style.left = 0;
+      }, "450");
+
+}
+
+function profileSideOfBtn(){
+    document.querySelector('#personInfo').style.animation = 'sideBarOff 0.5s';
+    setTimeout(() => {
+        document.querySelector('#personInfo').style.left = '-280px';
+          }, "450");
+}
+
+
+
+
 async function showPosts(){
     try{
         const response = await fetch("https://blog-api-t6u0.onrender.com/posts", {
@@ -65,5 +85,4 @@ async function deletePost(id){
 // showPosts();
 // createPost({title: 'Jimmy McGill', body: 'API test create'})
 // updatePost(1, {title: "John Doe", body: "Lorem IMPSUM"});
-
 // deletePost(5);
