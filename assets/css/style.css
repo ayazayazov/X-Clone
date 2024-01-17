@@ -308,6 +308,7 @@ body {
 /* posts */
 
 .posts{
+  /* display: none; */
   width: 380px;
   height: 400px;
   /* background-color: #fff; */
@@ -344,6 +345,10 @@ body {
 
 .postContentBody{
   margin-bottom: 14px;
+}
+
+.postImage{
+  width: 100%;
 }
 
 /* posts */

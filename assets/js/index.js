@@ -154,7 +154,14 @@ async function deletePost(id){
 // deletePost(5);
 
 async function renderElements(data){
-    posts.innerHTML = data.map((post) =>`
+    posts.innerHTML = data.map((post, index) =>{
+
+    // if(index < 101){
+    //     data = data.reverse();
+    // }
+    // if (index < 101) return null;
+
+    return `
     <div class="post" id="post">
         <div class="profilePhoto"><img src="./assets/imgs/profile.png" width="35px" alt="" /></div>
         <div class="postContent">
@@ -163,10 +170,11 @@ async function renderElements(data){
             <div class="threeDot"><button><img src="./assets/imgs/threeDot.png" width="35px" alt=""></button></div>
           </div>
           <div class="postContentBody">${post.body}</div>
+          <img class="postImage" src="https://loremflickr.com/640/480/${index}" alt="">
           <div class="postContentFooter">comment repost like view share</div>
         </div>
       </div>
-    `).join('');
+    `}).join('');
 }
 
 async function App(){
@@ -176,3 +184,23 @@ async function App(){
 }
 
 App()
+
+// new codes
+
+// const postInput = document.querySelector('#postInput');
+
+async function postBtn(){
+    let bodyContent = document.querySelector('#postInput').value;
+    const newPost = await createPost({title: 'John Doe', body: `${bodyContent}`})
+
+    data = [newPost, ...data];
+
+    document.querySelector('.container2').style.display = 'none';
+    document.querySelector('.container1').style.display = 'block';
+
+    renderElements(data);
+
+    // App()
+
+    // console.log('click');
+}
