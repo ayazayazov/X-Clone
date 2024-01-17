@@ -276,4 +276,20 @@ body {
 .heder_box_bottom_lines h2 {
   margin: 1rem;
 }
+
+body {
+  transition: background-color 0.5s;
+}
+
+.dark-mode {
+  background-color: #ffffff; /* Karanlık mod arka plan rengi */
+  color: #ffffff; /* Karanlık mod metin rengi */
+  /* Diğer stiller... */
+}
+
+
+.darkbtn{
+  margin-top: 24.5px;
+  border: none;
+}
 /* person_info */
