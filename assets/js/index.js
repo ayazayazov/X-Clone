@@ -4,7 +4,7 @@ function profileSideOnBtn(){
     document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
     setTimeout(() => {
     document.querySelector('#personInfo').style.left = 0;
-      }, "400");
+      }, "450");
 
 }
 
@@ -12,7 +12,7 @@ function profileSideOfBtn(){
     document.querySelector('#personInfo').style.animation = 'sideBarOff 0.5s';
     setTimeout(() => {
         document.querySelector('#personInfo').style.left = '-280px';
-          }, "450");
+          }, "400");
 }
 
 
