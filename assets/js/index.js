@@ -2,10 +2,11 @@
 function profileSideOnBtn(){
     console.log('click')
     document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
+    document.querySelector('.profileSideOnBtn').style.disabled = true;
     setTimeout(() => {
     document.querySelector('#personInfo').style.left = 0;
       }, "400");
-
+      document.querySelector('.profileSideOnBtn').style.disabled = false;
 }
 
 function profileSideOfBtn(){
