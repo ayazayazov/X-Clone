@@ -183,13 +183,10 @@ body {
 }
 /* person_info */
 .person_info {
-  /* display: none; */
   width: 280px;
   height: 100%;
   background: #000;
-  /* border: solid 1px white; */
   transition: 0.5s all;
-  /* animation: sideBar 0.5s; */
   position: fixed;
   height: 100vh;
   z-index: 99;

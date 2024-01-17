@@ -1,26 +1,20 @@
 
 function profileSideOnBtn(){
     console.log('click')
-    document.querySelector('#personInfo').style.animation = 'sideBarOn 0.300s';
-    document.querySelector('.profileSideOnBtn').style.display = 'none';
+    document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
     setTimeout(() => {
     document.querySelector('#personInfo').style.left = 0;
-      }, "200");
-    document.querySelector('.profileSideOnBtn').style.display = 'block';
+      }, "400");
 
 }
 
 function profileSideOfBtn(){
-    document.querySelector('#personInfo').style.animation = 'sideBarOff 0.300s';
-    // document.querySelector('.profileSideOnBtn').style.disabled = true
+    document.querySelector('#personInfo').style.animation = 'sideBarOff 0.5s';
     setTimeout(() => {
         document.querySelector('#personInfo').style.left = '-280px';
-          }, "200");
+          }, "400");
 
 }
-
-
-
 
 async function showPosts(){
     try{
@@ -83,8 +77,6 @@ async function deletePost(id){
         console.log("err", err);
     }
 };
-
-
 
 // showPosts();
 // createPost({title: 'Jimmy McGill', body: 'API test create'})
