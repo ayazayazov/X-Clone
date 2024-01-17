@@ -308,7 +308,7 @@ body {
 /* posts */
 
 .posts{
-  /* display: none; */
+  display: none;
   width: 380px;
   height: 400px;
   /* background-color: #fff; */
@@ -350,5 +350,24 @@ body {
 .postImage{
   width: 100%;
 }
-
 /* posts */
+
+
+
+/* delete edit button */
+
+.editdel{
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.708);
+  background-color: black;
+  display: flex;
+  gap: 10px;
+  width: 150px;
+}
+
+.editImg, .editText{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
