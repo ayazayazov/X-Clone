@@ -2,17 +2,20 @@
 function profileSideOnBtn(){
     console.log('click')
     document.querySelector('#personInfo').style.animation = 'sideBarOn 0.300s';
+    document.querySelector('.profileSideOnBtn').style.display = 'none';
     setTimeout(() => {
     document.querySelector('#personInfo').style.left = 0;
-      }, "150");
+      }, "200");
+    document.querySelector('.profileSideOnBtn').style.display = 'block';
+
 }
 
 function profileSideOfBtn(){
     document.querySelector('#personInfo').style.animation = 'sideBarOff 0.300s';
-
+    // document.querySelector('.profileSideOnBtn').style.disabled = true
     setTimeout(() => {
         document.querySelector('#personInfo').style.left = '-280px';
-          }, "150");
+          }, "200");
 
 }
 
