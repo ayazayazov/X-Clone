@@ -1,20 +1,38 @@
 
-function profileSideOnBtn(){
-    console.log('click')
+
+function profileSideOnBtn() {
+    console.log('click');
     document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
     setTimeout(() => {
-    document.querySelector('#personInfo').style.left = 0;
-      }, "400");
-
+        document.querySelector('#personInfo').style.left = 0;
+    }, 400);
 }
 
-function profileSideOfBtn(){
+function profileSideOfBtn() {
     document.querySelector('#personInfo').style.animation = 'sideBarOff 0.5s';
     setTimeout(() => {
         document.querySelector('#personInfo').style.left = '-280px';
-          }, "400");
-
+    }, 450);
 }
+
+
+
+// function profileSideOnBtn(){
+//     console.log('click')
+//     document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
+//     setTimeout(() => {
+//     document.querySelector('#personInfo').style.left = 0;
+//       }, "400");
+
+// }
+
+// function profileSideOfBtn(){
+//     document.querySelector('#personInfo').style.animation = 'sideBarOff 0.5s';
+//     setTimeout(() => {
+//         document.querySelector('#personInfo').style.left = '-280px';
+//           }, "400");
+
+// }
 
 async function showPosts(){
     try{
