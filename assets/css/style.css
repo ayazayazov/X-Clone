@@ -141,6 +141,7 @@ body {
 .backBtn{
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .container2 header .buttons {
   display: flex;
