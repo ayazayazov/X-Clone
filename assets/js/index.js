@@ -4,7 +4,7 @@ function profileSideOnBtn(){
     document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
     setTimeout(() => {
     document.querySelector('#personInfo').style.left = 0;
-      }, "450");
+      }, "400");
 
 }
 
