@@ -3,13 +3,25 @@
   padding: 0;
   margin: 0;
 }
+.container1 {
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container2 {
+  display: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 body {
   color: #e7e9ea;
   background-color: #000000;
   font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
 }
-header {
+.container1 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +29,7 @@ header {
   position: sticky;
   top: 0px;
 }
-header .first_nav {
+.container1 header .first_nav {
   padding: 10px;
   width: 100%;
   height: 50px;
@@ -25,7 +37,7 @@ header .first_nav {
   justify-content: space-between;
   align-items: center;
 }
-header .second_nav {
+.container1 header .second_nav {
   font-size: 17px;
   font-weight: bold;
   display: flex;
@@ -34,33 +46,33 @@ header .second_nav {
   align-items: center;
   border-bottom: 1px solid #2d3133;
 }
-header .second_nav span:first-child {
+.container1 header .second_nav span:first-child {
   border-bottom: 2px solid #1d9bf0;
   border-radius: 2px;
   padding: 15px;
 }
-header .second_nav span:first-child:hover {
+.container1 header .second_nav span:first-child:hover {
   background-color: rgba(231, 233, 234, 0.1);
 }
-header .second_nav span:last-child {
+.container1 header .second_nav span:last-child {
   color: #585c60;
   padding: 15px;
 }
-header .second_nav span:last-child:hover {
+.container1 header .second_nav span:last-child:hover {
   background-color: rgba(231, 233, 234, 0.1);
 }
 
-header img:hover {
+.container1 header img:hover {
   cursor: pointer;
 }
-main {
+.container1 main {
   width: 100%;
   height: 100vh;
   display: flex;
   position: relative;
   overflow: auto;
-} 
-main .add {
+}
+.container1 main .add {
   position: fixed;
   bottom: 100px;
   right: 30px;
@@ -75,17 +87,17 @@ main .add {
   color: #fff;
   border: none;
 }
-main .add:hover {
+.container1 main .add:hover {
   cursor: pointer;
 }
-main .button-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.container1 main .button-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-footer {
+.container1 footer {
   position: sticky;
   bottom: 0;
   width: 100%;
@@ -97,10 +109,10 @@ footer {
   padding-right: 30px;
   padding-bottom: 15px;
 }
-footer .first {
+.container1 footer .first {
   position: relative;
 }
-footer .dot {
+.container1 footer .dot {
   width: 5px;
   height: 5px;
   position: absolute;
@@ -109,81 +121,133 @@ footer .dot {
   background-color: #1d9bf0;
   border-radius: 5px;
 }
-footer img:hover {
+.container1 footer img:hover {
   cursor: pointer;
 }
-
+.container2 header {
+  height: 10px;
+  padding-top: 30px;
+  padding-right: 25px;
+  padding-left: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container2 header .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+.container2 header .buttons button {
+  background-color: #1d9bf0;
+  width: 70px;
+  font-size: 14px;
+  height: 35px;
+  border-radius: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+.container2 header .buttons span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 75px;
+  height: 40px;
+  border-radius: 25px;
+  color: #187ec3;
+  font-weight: bold;
+  border: none;
+}
+.container2 header .buttons span:hover {
+  background-color: #07446da6;
+}
+.container2 main {
+  margin-top: 45px;
+  margin-left: 10px;
+}
+.container2 .first_section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+.container2 .first_section input {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  color: #585c60;
+  font-size: 22px;
+}
 /* person_info */
-.person_info{
+.person_info {
   width: 280px;
   height: 100%;
   background: #000;
-border: solid 1px white;
-
-  position: absolute;
+  border: solid 1px white;
+  transition: 0.2s;
+  position: fixed;
+  height: 100vh;
   z-index: 99;
   top: 0;
-  left: 0;
-  
+  left: -280px;
 }
 
-.heder_box{
+.heder_box {
   display: flex;
-  
 }
 
-.line1{
-  display: flex ;
+.line1 {
+  display: flex;
   justify-content: space-between;
-width: 280px;
+  width: 280px;
   flex-direction: row;
   padding: 10px;
   margin-top: 0.5rem;
 }
 
-.line1 button{
+.line1 button {
   background-color: #000;
-  border-radius: 50% ;
+  border-radius: 50%;
   border: solid 1px #fff;
   color: #fff;
   width: 35px;
   height: 35px;
-  
+
   display: flex;
   justify-content: center;
-align-items: center;
-
+  align-items: center;
 }
 .heder_box_top h3 {
-margin: 0 0 0 1rem;
-
+  margin: 0 0 0 1rem;
 }
 .heder_box_top h4 {
   margin: 0 0 0 1rem;
   /* font-weight: 500; */
   color: #585c60;
-  }
+}
 
-  .line3{
-display: flex;
-flex-direction: row;
-margin-top: 1rem;
-  }
-  .heder_box_bottom_lines{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    width: 280px;
-    /* padding: 10px; */
-    align-items: center;
-    
-  }
-  .heder_box_bottom_lines img{
-width: 28px;
-height: 28px;
-margin-left: 1rem;
-  }
-  .heder_box_bottom_lines h2{
-    margin: 1rem;
-  }
+.line3 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+.heder_box_bottom_lines {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 280px;
+  /* padding: 10px; */
+  align-items: center;
+}
+.heder_box_bottom_lines img {
+  width: 28px;
+  height: 28px;
+  margin-left: 1rem;
+}
+.heder_box_bottom_lines h2 {
+  margin: 1rem;
+}
 /* person_info */
