@@ -1,22 +1,18 @@
 
 function profileSideOnBtn(){
     console.log('click')
-    document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
-    document.querySelector('.profileSideOnBtn').style.disabled = true;
+    document.querySelector('#personInfo').style.animation = 'sideBarOn 0.300s';
     setTimeout(() => {
     document.querySelector('#personInfo').style.left = 0;
-      }, "450");
-      document.querySelector('.profileSideOnBtn').style.disabled = false;
+      }, "150");
 }
 
 function profileSideOfBtn(){
-    document.querySelector('#personInfo').style.animation = 'sideBarOff 0.5s';
-    // document.querySelector('.profileSideOffBtn').style.disabled = true;
+    document.querySelector('#personInfo').style.animation = 'sideBarOff 0.300s';
 
     setTimeout(() => {
         document.querySelector('#personInfo').style.left = '-280px';
-          }, "450");
-    document.querySelector('.profileSideOffBtn').style.disabled = false;
+          }, "150");
 
 }
 
