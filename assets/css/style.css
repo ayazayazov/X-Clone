@@ -28,6 +28,10 @@ body {
   align-items: center;
   position: sticky;
   top: 0px;
+  /* z-index: 99; */
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  margin-bottom: 20px;
 }
 .container1 header .first_nav {
   padding: 10px;
@@ -132,6 +136,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.backBtn{
+  background-color: transparent;
+  border: none;
 }
 .container2 header .buttons {
   display: flex;
@@ -293,3 +302,47 @@ body {
   border: none;
 }
 /* person_info */
+
+
+/* posts */
+
+.posts{
+  width: 380px;
+  height: 400px;
+  /* background-color: #fff; */
+  z-index: -99;
+  margin: auto;
+}
+
+.post{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.postContent{
+  /* display: flex; */
+  margin-left: 14px;
+  width: 100%;
+}
+
+.postContentHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.threeDot button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.postContentBody{
+  margin-bottom: 14px;
+}
+
+/* posts */

@@ -1,4 +1,16 @@
+let data = [];
 
+const posts = document.querySelector('#posts');
+
+function newPostBtn(){
+    document.querySelector('.container1').style.display = 'none';
+    document.querySelector('.container2').style.display = 'block';
+}
+
+function backBtn(){
+    document.querySelector('.container2').style.display = 'none';
+    document.querySelector('.container1').style.display = 'block';
+}
 
 function profileSideOnBtn() {
     console.log('click');
@@ -140,3 +152,27 @@ async function deletePost(id){
 // createPost({title: 'Jimmy McGill', body: 'API test create'})
 // updatePost(1, {title: "John Doe", body: "Lorem IMPSUM"});
 // deletePost(5);
+
+async function renderElements(data){
+    posts.innerHTML = data.map((post) =>`
+    <div class="post" id="post">
+        <div class="profilePhoto"><img src="./assets/imgs/profile.png" width="35px" alt="" /></div>
+        <div class="postContent">
+          <div class="postContentHeader">
+            <div class="username">${post.title}</div>
+            <div class="threeDot"><button><img src="./assets/imgs/threeDot.png" width="35px" alt=""></button></div>
+          </div>
+          <div class="postContentBody">${post.body}</div>
+          <div class="postContentFooter">comment repost like view share</div>
+        </div>
+      </div>
+    `).join('');
+}
+
+async function App(){
+    data = await showPosts();
+
+    renderElements(data.reverse());
+}
+
+App()

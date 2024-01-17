@@ -64,10 +64,11 @@
         <h2>Log out</h2>
 
         <!-- dark mode button -->
-        <button class="darkbtn" onclick="toggleDarkMode()"><img src="./assets/imgs/dark-mode-icon.png" width="35px" alt=""></button>
-    <div id="content">
+        <button class="darkbtn" onclick="toggleDarkMode()"><img src="./assets/imgs/dark-mode-icon.png" width="35px"
+            alt=""></button>
+        <div id="content">
 
-    </div>
+        </div>
       </div>
     </div>
   </div>
@@ -87,9 +88,23 @@
         <span>Following</span>
       </nav>
     </header>
+    <div class="posts" id="posts">
+      <!-- <div class="post" id="post">
+        <div class="profilePhoto"><img src="./assets/imgs/profile.png" width="35px" alt="" /></div>
+        <div class="postContent">
+          <div class="postContentHeader">
+            <div class="username">Username</div>
+            <div class="threeDot"><button><img src="./assets/imgs/threeDot.png" alt=""></button></div>
+          </div>
+          <div class="postContentBody">Your soul mate is someone who knows the melody of your heart. And plays it for
+            you when you’ve forgotten it.</div>
+          <div class="postContentFooter">comment repost like view share</div>
+        </div>
+      </div> -->
+    </div>
     <main>
       <div class="button-container">
-        <a href=""><button class="add">+</button></a>
+        <button onclick="newPostBtn()" class="add">+</button>
       </div>
     </main>
     <footer>
@@ -107,7 +122,7 @@
   <!-- This area must work when i press + button -->
   <nav class="container2">
     <header>
-      <img src="./assets/imgs/back.png" width="18px">
+      <button onclick="backBtn()" class="backBtn"><img src="./assets/imgs/back.png" width="18px"></button>
       <div class="buttons">
         <span>Drafts</span>
         <button>Post</button>
