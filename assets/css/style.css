@@ -28,7 +28,6 @@ body {
   align-items: center;
   position: sticky;
   top: 0px;
-  /* z-index: 99; */
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(15px);
   margin-bottom: 20px;
@@ -41,6 +40,15 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+.container1 header .first_nav img:nth-child(2){
+  margin-top: 20px;
+}
+
+.container1 header .first_nav img:nth-child(3){
+  margin-top: 20px;
+}
+
 .container1 header .second_nav {
   font-size: 17px;
   font-weight: bold;
@@ -71,10 +79,6 @@ body {
 }
 .container1 main {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  position: relative;
-  overflow: auto;
 }
 .container1 main .add {
   position: fixed;
@@ -101,17 +105,17 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
 }
-.container1 footer {
-  position: sticky;
+
+footer {
+  position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 15px;
+  padding: 15px 30px;
 }
 .container1 footer .first {
   position: relative;
@@ -128,6 +132,9 @@ body {
 .container1 footer img:hover {
   cursor: pointer;
 }
+
+/* new post container */
+
 .container2 header {
   height: 10px;
   padding-top: 30px;
@@ -185,6 +192,76 @@ body {
   gap: 15px;
 }
 .container2 .first_section input {
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  color: #585c60;
+  font-size: 22px;
+}
+
+/* edit container */
+
+.editContainer{
+  display: none;
+}
+
+.editContainer header {
+  height: 10px;
+  padding-top: 30px;
+  padding-right: 25px;
+  padding-left: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backBtn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.editContainer header .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+.editContainer header .buttons button {
+  background-color: #1d9bf0;
+  width: 70px;
+  font-size: 14px;
+  height: 35px;
+  border-radius: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+.editContainer header .buttons span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 75px;
+  height: 40px;
+  border-radius: 25px;
+  color: #187ec3;
+  font-weight: bold;
+  border: none;
+}
+.editContainer header .buttons span:hover {
+  background-color: #07446da6;
+}
+.editContainer main {
+  margin-top: 45px;
+  margin-left: 10px;
+}
+.editContainer .first_section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+.editContainer .first_section input {
   height: 40px;
   background-color: transparent;
   border: none;
@@ -261,7 +338,6 @@ body {
 }
 .heder_box_top h4 {
   margin: 0 0 0 1rem;
-  /* font-weight: 500; */
   color: #585c60;
 }
 
@@ -275,7 +351,6 @@ body {
   flex-direction: row;
   gap: 1rem;
   width: 280px;
-  /* padding: 10px; */
   align-items: center;
 }
 .heder_box_bottom_lines img {
@@ -308,10 +383,8 @@ body {
 /* posts */
 
 .posts{
-  display: none;
   width: 380px;
   height: 400px;
-  /* background-color: #fff; */
   z-index: -99;
   margin: auto;
 }
@@ -324,7 +397,6 @@ body {
 }
 
 .postContent{
-  /* display: flex; */
   margin-left: 14px;
   width: 100%;
 }
@@ -334,6 +406,10 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 14px;
+}
+
+.postImage{
+  border-radius: 10px;
 }
 
 .threeDot button{
@@ -347,27 +423,37 @@ body {
   margin-bottom: 14px;
 }
 
+.postContentFooter{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.postContentFooter img{
+  width: 20px;
+}
+
 .postImage{
   width: 100%;
 }
 /* posts */
 
-
-
 /* delete edit button */
 
 .editdel{
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.708);
+  margin-top: 10px;
   background-color: black;
   display: flex;
   gap: 10px;
-  width: 150px;
 }
 
-.editImg, .editText{
+.deleteBtn, .editBtn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.editImg{
   display: flex;
-  flex-direction: column;
   gap: 10px;
 }

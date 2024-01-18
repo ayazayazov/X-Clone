@@ -72,8 +72,6 @@
       </div>
     </div>
   </div>
-  <!-- person_info -->
-
   <nav class="container1">
     <header>
       <nav class="first_nav">
@@ -81,7 +79,7 @@
             width="35px" /></button>
 
         <img src="./assets/imgs/x-icon.png" width="45px" />
-        <img src="./assets/imgs/settings.png" width="45px" />
+        <img src="./assets/imgs/settings.png" width="30px" />
       </nav>
       <nav class="second_nav">
         <span>For You</span>
@@ -89,27 +87,36 @@
       </nav>
     </header>
     <div class="posts" id="posts">
-      <div class="post" id="post">
+      <!-- <div class="post" id="post">
         <div class="profilePhoto"><img src="./assets/imgs/profile.png" width="35px" alt="" /></div>
         <div class="postContent">
           <div class="postContentHeader">
             <div class="username">Username</div>
-            <div id="editDel" class="threeDot"><button><img src="./assets/imgs/threeDot.png" alt=""></button></div>
+            <div id="editdelete" class="editdel">
+              <div class="editImg"><img class="img_del" width="25px" src="./assets/imgs/icons8-trash-64.png" alt=""><img
+                  width="20px" src="./assets/imgs/icons8-pencil-64.png" alt=""></div>
+              <div class="editText">
+                <span class="delete">Delete</span>
+                <span class="edit">Edit</span>
+              </div>
+            </div>
+            <div id="editDel" class="threeDot"><button onclick="threeDot()"><img src="./assets/imgs/threeDot.png"
+                  alt=""></button></div>
           </div>
           <div class="postContentBody">Your soul mate is someone who knows the melody of your heart. And plays it for
             you when you’ve forgotten it.</div>
-            <img src="https://loremflickr.com/640/480/" alt="">
+          <img src="https://loremflickr.com/640/480/" alt="">
           <div class="postContentFooter">comment repost like view share</div>
         </div>
-      </div>
-    </div>
-
-    <div id="editdelete" class="editdel">
-      <div class="editImg"><img class="img_del" width="25px" src="./assets/imgs/icons8-trash-64.png" alt=""><img width="20px" src="./assets/imgs/icons8-pencil-64.png" alt=""></div>
-      <div class="editText">
-        <span class="delete">Delete</span>
-        <span class="edit">Edit</span>
-      </div>
+      </div> -->
+      <!-- <div id="editdelete" class="editdel">
+        <div class="editImg"><img class="img_del" width="25px" src="./assets/imgs/icons8-trash-64.png" alt=""><img
+            width="20px" src="./assets/imgs/icons8-pencil-64.png" alt=""></div>
+        <div class="editText">
+          <span class="delete">Delete</span>
+          <span class="edit">Edit</span>
+        </div>
+      </div> -->
     </div>
 
     <main>
@@ -117,16 +124,6 @@
         <button onclick="newPostBtn()" class="add">+</button>
       </div>
     </main>
-    <footer>
-      <div class="first">
-        <div class="dot"></div>
-        <img src="./assets/imgs/home.png" width="25px" />
-      </div>
-      <img src="./assets/imgs/search.png" width="25px" />
-      <img src="./assets/imgs/bell.png" width="25px" />
-      <img src="./assets/imgs/mail.png" width="29px" />
-    </footer>
-    <script src="./assets/js/index.js"></script>
   </nav>
 
   <!-- This area must work when i press + button -->
@@ -147,6 +144,35 @@
       </section>
     </main>
   </nav>
+
+  <div class="editContainer">
+    <header>
+      <button onclick="backBtn()" class="backBtn"><img src="./assets/imgs/back.png" width="18px"></button>
+      <div class="buttons">
+        <span>Drafts</span>
+        <button id="editPostBtn">Post</button>
+      </div>
+    </header>
+    <main>
+      <section class="first_section">
+        <img src="./assets/imgs/profile.png" width="42px">
+        <input id="editPostInput" type="text" placeholder="What is happening?!">
+      </section>
+      <section class="first_section">
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="first">
+      <div class="dot"></div>
+      <img src="./assets/imgs/home.png" width="25px" />
+    </div>
+    <img src="./assets/imgs/search.png" width="25px" />
+    <img src="./assets/imgs/bell.png" width="25px" />
+    <img src="./assets/imgs/mail.png" width="29px" />
+  </footer>
+
   <script src="./assets/js/index.js"></script>
 </body>
 

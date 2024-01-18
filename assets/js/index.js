@@ -2,9 +2,52 @@ let data = [];
 
 const posts = document.querySelector('#posts');
 
+const editPostBtn = document.querySelector('#editPostBtn');
+
+
 function newPostBtn(){
     document.querySelector('.container1').style.display = 'none';
+    document.querySelector('.editContainer').style.display = 'none';
     document.querySelector('.container2').style.display = 'block';
+}
+
+
+
+function editBtn(id){
+    console.log('id', id);
+    document.querySelector('.editContainer').style.display = 'block';
+    document.querySelector('.container1').style.display = 'none';
+    document.querySelector('.container2').style.display = 'none';
+
+    editPostBtn.addEventListener('click', async function(){
+        console.log('click');
+        let form = {title: 'John Doe', body: `${document.querySelector('#editPostInput').value}`}
+        try{
+            await updatePost(id, form);
+        
+            document.querySelector('.editContainer').style.display = 'none';
+            document.querySelector('.container1').style.display = 'block';
+            document.querySelector('.container2').style.display = 'none';
+            // renderElements(data);
+            App();
+        
+            }catch (err) {
+                console.log("err", err);
+              }
+    })
+
+}
+
+async function deleteBtn(id){
+    try{
+    await deletePost(id);
+    console.log("Ugurla silindi", id);
+    data = data.filter((post) => post.id !== id);
+    renderElements(data);
+
+    }catch (err) {
+        console.log("err", err);
+      }
 }
 
 function backBtn(){
@@ -54,37 +97,6 @@ function toggleDarkMode() {
     }
 }
 
-
-// let isDarkMode = false;
-
-// function toggleDarkMode() {
-//     const body = document.body;
-//     isDarkMode = !isDarkMode;
-
-//     if (isDarkMode) {
-//         body.classList.add('dark-mode');
-//     } else {
-//         body.classList.remove('dark-mode');
-//     }
-// }
-
-
-// function profileSideOnBtn(){
-//     console.log('click')
-//     document.querySelector('#personInfo').style.animation = 'sideBarOn 0.5s';
-//     setTimeout(() => {
-//     document.querySelector('#personInfo').style.left = 0;
-//       }, "400");
-
-// }
-
-// function profileSideOfBtn(){
-//     document.querySelector('#personInfo').style.animation = 'sideBarOff 0.5s';
-//     setTimeout(() => {
-//         document.querySelector('#personInfo').style.left = '-280px';
-//           }, "400");
-
-// }
 
 async function showPosts(){
     try{
@@ -156,10 +168,6 @@ async function deletePost(id){
 async function renderElements(data){
     posts.innerHTML = data.map((post, index) =>{
 
-    // if(index < 101){
-    //     data = data.reverse();
-    // }
-    // if (index < 101) return null;
 
     return `
     <div class="post" id="post">
@@ -167,14 +175,27 @@ async function renderElements(data){
         <div class="postContent">
           <div class="postContentHeader">
             <div class="username">${post.title}</div>
-            <div class="threeDot"><button><img src="./assets/imgs/threeDot.png" width="35px" alt=""></button></div>
+            <div id="editdelete" class="editdel">
+      <div class="editImg">
+        <button onclick="deleteBtn(${post.id})" class="deleteBtn"><img class="img_del" width="25px" src="./assets/imgs/icons8-trash-64.png" alt=""></button>
+        <button onclick="editBtn(${post.id})" class="editBtn"><img width="20px" src="./assets/imgs/icons8-pencil-64.png" alt=""></button>
+      </div>
+    </div> 
+            
           </div>
           <div class="postContentBody">${post.body}</div>
           <img class="postImage" src="https://loremflickr.com/640/480/${index}" alt="">
-          <div class="postContentFooter">comment repost like view share</div>
+          <div class="postContentFooter"><img src="./assets/imgs/cooment.png" alt="">
+          <img src="./assets/imgs/repost.png" alt="">
+          <img src="./assets/imgs/like.png" alt="">
+          <img src="./assets/imgs/view.png" alt="">
+          <img src="./assets/imgs/share.png" alt=""></div>
         </div>
       </div>
+
     `}).join('');
+
+
 }
 
 
@@ -187,9 +208,7 @@ async function App(){
 
 App()
 
-// new codes
 
-// const postInput = document.querySelector('#postInput');
 
 async function postBtn(){
     let bodyContent = document.querySelector('#postInput').value;
@@ -202,7 +221,16 @@ async function postBtn(){
 
     renderElements(data);
 
-    // App()
+}
 
-    // console.log('click');
+async function deleteBtn(id){
+    try{
+    await deletePost(id);
+    console.log("Ugurla silindi", id);
+    data = data.filter((post) => post.id !== id);
+    renderElements(data);
+
+    }catch (err) {
+        console.log("err", err);
+      }
 }
